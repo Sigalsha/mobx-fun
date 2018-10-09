@@ -25,7 +25,7 @@ class IceCreamForm extends Component {
         <div className="container">
             Add flavor:<input type="text" onChange={this.handleInputChange} name="flavor" value={this.iceCream.flavor} ></input>
             Add color:<input type="text" onChange={this.handleInputChange} name="color" value={this.iceCream.color}></input>
-            <input type="button" onClick={this.handleClick} value="submit"></input>
+            <input  className="btn" type="button" onClick={this.handleClick} value="submit"></input>
         </div>
       );
     }

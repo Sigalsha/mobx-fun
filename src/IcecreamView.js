@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { observable } from "mobx";
 import './IceCreamView.css'
-import icecream from './icecream.jpeg'
+import iceCream from './iceCream.svg'
 
 @inject("store")
 @observer
@@ -34,9 +34,8 @@ class IcecreamView extends Component {
     return (
       <li className="li-con">
         <span className="li-text">{this.props.flavor} - {this.props.color}</span>
-        <img className="li-image" src={icecream} alt="icecream" />
+        <img className="li-image" src={iceCream} alt="icecream" />
         <div className="update-con">
-          <input className="btn" type="button" onClick={this.addComment} value="comment"></input>
           <span className="li-header">flavor:</span><input className="input" type="text" onChange={this.handleInputChange} name="flavor" value={this.iceCreamToEdit.flavor} ></input>
           <span className="li-header">color:</span><input className="input" type="text" onChange={this.handleInputChange} name="color" value={this.iceCreamToEdit.color}></input>
           <input className="btn" type="button" onClick={this.handleUpdate} value="update"></input>

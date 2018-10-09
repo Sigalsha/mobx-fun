@@ -1,12 +1,13 @@
 .li-con {
-    width: 50%;
-    height: 100%;
+    width: 60%;
+    height: 20%;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     padding: 1%;
     margin: 1%;
-    background-color: rgba(234, 231, 236, 0.774);
+    margin-left: 20%;
+    background-color: #282c34;
 }
 
 .li-text {

@@ -1,9 +1,35 @@
 .container {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
-    padding: 1%;
+    padding: 2%;
     margin: 1%;
-    background-color: rgba(219, 209, 243, 0.8);
+    margin-left: 20%;
+    background-color: #282c34;
+    color: #df7789;
+    font-size: 1.3em;
+    font-weight: 400;
+}
 
+input {
+    background-color: transparent;
+    border-style: solid; 
+    border-color: rgba(223, 119, 137, 0.4);
+    color: #df7789;
+}
+
+input[type="text"] {
+    border-width: 0px 0px 1px 0px; 
+}
+
+.btn { 
+    font-family: inherit;
+}
+
+.btn:hover {
+    font-weight: bold;
+}
+
+input[value] {
+    font-size: 0.8em;
 }
