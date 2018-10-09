@@ -1,0 +1,9 @@
+.container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    margin: 1%;
+    background-color: rgba(219, 209, 243, 0.8);
+
+}
