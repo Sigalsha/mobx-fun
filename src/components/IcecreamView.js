@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { observable } from "mobx";
-import './IceCreamView.css'
-import iceCream from './iceCream.svg'
+import '../styles/IceCreamView.css'
+import iceCream from '../images/iceCream.svg'
 
 @inject("store")
 @observer
@@ -27,12 +27,11 @@ class IcecreamView extends Component {
     this.iceCreamToEdit[event.target.name] = event.target.value
   }
 
-  addComment = () => {
-  }
+
 
   render() {
     return (
-      <li className="li-con">
+      <div id="ice-cream-view">
         <span className="li-text">{this.props.flavor} - {this.props.color}</span>
         <img className="li-image" src={iceCream} alt="icecream" />
         <div className="update-con">
@@ -41,7 +40,7 @@ class IcecreamView extends Component {
           <input className="btn" type="button" onClick={this.handleUpdate} value="update"></input>
           <input className="btn" type="button" onClick={this.handleDelete} value="delete"></input>
         </div>
-      </li>
+      </div>
     );
   }
 }

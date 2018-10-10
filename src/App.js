@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import iceCreamLogo from './ice-cream.svg'
+import iceCreamLogo from './images/ice-cream.svg'
 import { observer, inject } from 'mobx-react';
-import IceCreamForm from './IceCreamForm'
-import IcecreamView from './IcecreamView'
-import { observable, action } from "mobx";
+import IceCreamForm from './components/IceCreamForm'
+import IcecreamView from './components/IcecreamView'
+// import { observable, action } from "mobx";
 
 @inject("store")
 @observer

@@ -16,6 +16,7 @@ input {
     border-style: solid; 
     border-color: rgba(223, 119, 137, 0.4);
     color: #df7789;
+    margin-left: %;
 }
 
 input[type="text"] {

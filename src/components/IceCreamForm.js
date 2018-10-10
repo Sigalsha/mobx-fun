@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { action } from "mobx";
 import {observer, inject} from 'mobx-react';
-import { observable } from "mobx";
-import './IceCreamForm.css'
+import { observable, action } from "mobx";
+import '../styles/IceCreamForm.css'
 
 @inject(allStores => 
     ({ addIceCream: allStores.store.addIceCream }))

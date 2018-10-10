@@ -1,0 +1,61 @@
+#ice-cream-view {
+    width: 60%;
+    height: 80%;
+    margin-left: 20%;
+    color: #df7789;
+
+}
+
+.li-text {
+    width: 40%;
+    margin-right: 10%;
+    font-size: 1.4em;
+    color: whitesmoke;
+}
+
+.li-image {
+    width: 8%;
+    height: 4%;
+    /* margin-right: 5% */
+}
+
+.update-con {
+    width: 60%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40%;
+    font-size: 1.18em;
+    background-color: #282c34;
+    color: #df7789;
+    padding: 2%; 
+    margin: 1%;
+}
+
+.li-header {
+    margin-right: 3%;
+}
+
+input {
+    background-color: transparent;
+    border-style: solid; 
+    border-color: rgba(223, 119, 137, 0.4);
+    color: #df7789;
+    margin-right: 2%;
+}
+
+input[type="text"] {
+    border-width: 0px 0px 1px 0px; 
+}
+
+.btn { 
+    font-family: inherit;
+}
+
+.btn:hover {
+    font-weight: bold;
+}
+
+input[value] {
+    font-size: 0.8em;
+} 
