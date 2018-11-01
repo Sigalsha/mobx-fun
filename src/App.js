@@ -29,7 +29,11 @@ class App extends Component {
           <h1 className="App-title">Welcome to the ice cream shop</h1>
           <img className="App-logo" src={iceCreamLogo} alt="ice-cream" />
         </header>
-        <div>{this.getIceCreams(this.props.store.iceCreams)}</div>
+        <div>{this.props.store.filterString === "" ?
+        (this.getIceCreams(this.props.store.iceCreams)) :
+         (this.getIceCreams(this.props.store.filteredIcecreams))}
+        
+        </div>
         <IceCreamForm />
         <IconCredit />
       </div>

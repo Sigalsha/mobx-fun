@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
-import { observable } from "mobx";
+import { observable, action } from "mobx";
 import '../styles/IceCreamView.css'
 import iceCream from '../images/iceCream.svg'
 
@@ -9,9 +9,9 @@ import iceCream from '../images/iceCream.svg'
 class IcecreamView extends Component {
 
   @observable iceCreamToEdit = { flavor: this.props.flavor, color: this.props.color, _id: this.props._id }
-  displayUpdate = { display: false }
 
-  handleUpdate = () => {
+
+  @action handleUpdate = () => {
     this.props.store.updateIceCream(this.iceCreamToEdit, this.props.i)
   }
 
@@ -19,12 +19,12 @@ class IcecreamView extends Component {
     this.props.store.deleteIceCream(this.props.i)
   }
 
-  handleEdit = () => {
-    this.displayUpdate.display = true;
-  }
-
   handleInputChange = (event) => {
     this.iceCreamToEdit[event.target.name] = event.target.value
+  }
+
+  @action handleFilter = (event) => {
+    this.props.store[event.target.name] = event.target.value
   }
 
 
@@ -40,6 +40,7 @@ class IcecreamView extends Component {
           <input className="btn" type="button" onClick={this.handleUpdate} value="update"></input>
           <input className="btn" type="button" onClick={this.handleDelete} value="delete"></input>
         </div>
+        <input type="text" onChange={this.handleFilter} name="filterString" value={this.props.store.filterString} placeholder="search"/>
       </div>
     );
   }
