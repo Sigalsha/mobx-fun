@@ -4,6 +4,7 @@ import { action } from "mobx";
 
 class IceCreamStore {
     @observable iceCreams = [];
+    @observable filterString ="";
 
     guidGenerator = () => {
         var S4 = function() {
@@ -25,6 +26,15 @@ class IceCreamStore {
         this.iceCreams[index] = object
 
     }
+
+    // @computed get filteredIcecreams() => {
+    //     return this.iceCreams.filter(iceCream => {
+
+    //     }) 
+    // }
+
+    // filteredMovies.filter(movie => {
+    //     return movie.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
 }
 
 const store = new IceCreamStore();
